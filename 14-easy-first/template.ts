@@ -4,12 +4,12 @@
 type First<T extends any[]> = T extends [infer First, ...infer Rest] ? First : never
 type Last<T extends any[]> = T extends [...infer Rest, infer Last] ? Last : never
 
-type ages = [1,2,3]
-type t1 = ages[number] // 1 | 2 | 3
+// type ages = [1,2,3]
+// type t1 = ages[number] // 1 | 2 | 3
 
-type t2 = 1 extends ages[number] ? "true" : "false"
+// type t2 = 1 extends ages[number] ? "true" : "false"
 
-type l1 = Last<ages> // 3
+// type l1 = Last<ages> // 3
 
 // js实现
 // function getFirst(arr) {
